@@ -1,0 +1,165 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="currency_digit_textview_style">
+        <item name="android:textSize">@dimen/_13ssp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="fontFamily">@font/fontsfree_net_point_soft_black</item>
+    </style>
+
+    <style name="currency_digit_textview_style_black">
+        <item name="android:textSize">@dimen/_13ssp</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textStyle">bold</item>
+        <item name="fontFamily">@font/fontsfree_net_point_soft_black</item>
+    </style>
+
+    <style name="htp_textview_style">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="fontFamily">@font/fontsfree_net_point_soft_black</item>
+    </style>
+
+    <style name="game_recycler_heading_textview_style">
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:textColor">@color/color_game_recycle_heading_text</item>
+        <item name="android:textStyle">bold</item>
+        <item name="fontFamily">@font/fontsfree_net_point_soft_black</item>
+    </style>
+
+    <style name="game_recycler_heading_textview_style_black_color">
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textStyle">bold</item>
+        <item name="fontFamily">@font/fontsfree_net_point_soft_black</item>
+    </style>
+
+    <style name="game_recycler_detail_textview_style_blue_color">
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:textColor">@color/color_game_recycle_detail_text</item>
+        <item name="android:textStyle">bold</item>
+        <item name="fontFamily">@font/fontsfree_net_point_soft_black</item>
+    </style>
+
+    <style name="game_recycler_detail_textview_style_gray_color">
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:textColor">@color/color_game_recycle_detail_ticket_price_text</item>
+        <item name="android:textStyle">bold</item>
+        <item name="fontFamily">@font/fontsfree_net_point_soft_black</item>
+    </style>
+
+    <style name="button_style_textview" parent="TextAppearance.AppCompat.Button">
+        <item name="android:textSize">@dimen/_10ssp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="fontFamily">@font/fontsfree_net_point_soft_black</item>
+    </style>
+
+    <style name="button_view_style_textview" parent="TextAppearance.AppCompat.Button">
+        <item name="android:textSize">@dimen/_10ssp</item>
+        <item name="android:textColor">@color/color_detail_textview_login_signup</item>
+        <item name="android:textStyle">bold</item>
+        <item name="fontFamily">@font/fontsfree_net_point_soft_black</item>
+    </style>
+
+    <style name="button_text_style">
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="fontFamily">@font/fontsfree_net_point_soft_black</item>
+    </style>
+
+    <style name="button_text_style_new">
+        <item name="android:textSize">@dimen/_21ssp</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textStyle">bold</item>
+        <item name="fontFamily">@font/fontsfree_net_point_soft_black</item>
+    </style>
+
+    <style name="detail_textview_style">
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:textColor">@color/color_detail_textview_login_signup</item>
+        <item name="android:textStyle">bold</item>
+        <item name="fontFamily">@font/fontsfree_net_point_soft_black</item>
+        <item name="android:layout_marginEnd">@dimen/_5sdp</item>
+    </style>
+
+    <style name="recycler_textview_style">
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:textColor">@color/color_detail_textview_login_signup</item>
+        <item name="android:textStyle">bold</item>
+        <item name="fontFamily">@font/fontsfree_net_point_soft_black</item>
+    </style>
+
+    <style name="detail_edittext_style">
+        <item name="android:textSize">@dimen/_13ssp</item>
+        <item name="android:textColor">@color/color_detail_textview_login_signup</item>
+        <item name="android:textStyle">bold</item>
+        <item name="fontFamily">@font/fontsfree_net_point_soft_black</item>
+    </style>
+
+    <style name="otp_textview_style">
+        <item name="android:textSize">@dimen/_20ssp</item>
+        <item name="android:textColor">@color/color_detail_textview_login_signup</item>
+        <item name="android:textStyle">bold</item>
+        <item name="fontFamily">@font/fontsfree_net_point_soft_black</item>
+    </style>
+
+    <style name="greyout_textview_style">
+        <item name="android:textSize">@dimen/_11ssp</item>
+        <item name="android:textColor">@color/color_greyout_textview</item>
+        <item name="android:textStyle">bold</item>
+        <item name="fontFamily">@font/fontsfree_net_point_soft_black</item>
+    </style>
+
+    <style name="menu_detail_user_detail">
+        <item name="android:textSize">@dimen/_14ssp</item>
+        <item name="android:textColor">@color/color_game_recycle_heading_text</item>
+        <item name="android:textStyle">bold</item>
+        <item name="fontFamily">@font/fontsfree_net_point_soft_black</item>
+    </style>
+
+    <style name="edit_profile_text_style">
+        <item name="android:textSize">@dimen/_15ssp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="fontFamily">@font/fontsfree_net_point_soft_black</item>
+    </style>
+
+    <style name="timer_style">
+        <item name="android:textSize">@dimen/_20ssp</item>
+        <item name="android:textColor">@color/color_game_recycle_heading_text</item>
+        <item name="android:textStyle">bold</item>
+        <item name="fontFamily">@font/fontsfree_net_point_soft_black</item>
+    </style>
+
+    <style name="winner_table_row_style">
+        <item name="android:textSize">@dimen/_16ssp</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textStyle">bold</item>
+        <item name="fontFamily">@font/fontsfree_net_point_soft_black</item>
+    </style>
+
+    <!-- Theme.AppCompat.Light is not a dialog theme -->
+    <style name="DialogTheme" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorAccent">@color/color_detail_textview_login_signup</item>
+    </style>
+
+    <style name="SCBSwitch">
+        <item name="thumbTint">@drawable/new_thumb</item>
+        <item name="trackTint">@drawable/new_track</item>
+    </style>
+
+    <style name="SwitchTheme" parent="Theme.AppCompat.Light">
+        <item name="android:colorControlActivated">@color/color_detail_textview_login_signup</item>
+        <item name="android:colorControlNormal">@color/color_greyout_textview</item>
+    </style>
+</resources>

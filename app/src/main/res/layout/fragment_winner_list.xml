@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/_7sdp"
+    tools:context="com.devanshi.tambola.coinpicker.fragments.ui.dashboard.ChangePasswordFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/txt_change_password"
+            android:layout_width="@dimen/_234sdp"
+            android:layout_height="@dimen/_45sdp"
+            android:paddingBottom="@dimen/_5sdp"
+            android:background="@drawable/login_signup_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/change_password"
+                style="@style/currency_digit_textview_style"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/edt_old_password_wrapper"
+            android:layout_width="@dimen/_234sdp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_change_password"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleDrawable="@drawable/show_password_selector"
+            app:passwordToggleTint="@null"
+            app:hintAnimationEnabled="false"
+            app:hintEnabled="false"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:layout_marginHorizontal="@dimen/_25sdp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_old_password"
+                style="@style/button_text_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints=""
+                android:backgroundTint="@android:color/white"
+                android:gravity="center"
+                android:hint="@string/oldpassword"
+                android:inputType="textPassword"
+                android:selectAllOnFocus="true"
+                android:singleLine="true" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/edt_new_password_wrapper"
+            android:layout_width="@dimen/_234sdp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edt_old_password_wrapper"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleDrawable="@drawable/show_password_selector"
+            app:passwordToggleTint="@null"
+            app:hintAnimationEnabled="false"
+            app:hintEnabled="false"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:layout_marginHorizontal="@dimen/_25sdp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_new_password"
+                style="@style/button_text_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints=""
+                android:backgroundTint="@android:color/white"
+                android:gravity="center"
+                android:hint="@string/str_new_password"
+                android:inputType="textPassword"
+                android:selectAllOnFocus="true"
+                android:singleLine="true" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/edt_confirm_new_password_wrapper"
+            android:layout_width="@dimen/_234sdp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edt_new_password_wrapper"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleDrawable="@drawable/show_password_selector"
+            app:passwordToggleTint="@null"
+            app:hintAnimationEnabled="false"
+            app:hintEnabled="false"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:layout_marginHorizontal="@dimen/_25sdp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_confirm_new_password"
+                style="@style/button_text_style"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_36sdp"
+                android:autofillHints=""
+                android:backgroundTint="@android:color/white"
+                android:gravity="center"
+                android:hint="@string/str_confirm_new_password"
+                android:inputType="textPassword"
+                android:selectAllOnFocus="true"
+                android:singleLine="true" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btn_submit"
+            style="@style/button_text_style"
+            android:layout_width="@dimen/_130sdp"
+            android:layout_height="@dimen/_36sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:background="@drawable/btn_background"
+            android:gravity="center"
+            android:text="@string/submit"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edt_confirm_new_password_wrapper" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

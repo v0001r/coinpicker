@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:padding="@dimen/_10sdp"
+    tools:context="com.devanshi.tambola.coinpicker.fragments.ui.mycontest.ResumeGameFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/header_cl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/llBoard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                style="@style/detail_textview_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Board" />
+
+            <Switch
+                android:id="@+id/boardSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:theme="@style/SwitchTheme" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llSound"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toStartOf="@+id/llAuto"
+            app:layout_constraintStart_toEndOf="@+id/llBoard"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                style="@style/detail_textview_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Sound" />
+
+            <Switch
+                android:id="@+id/soundSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:theme="@style/SwitchTheme" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llAuto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tvAuto"
+                style="@style/detail_textview_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Auto" />
+
+            <Switch
+                android:id="@+id/autoSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:theme="@style/SwitchTheme"
+                app:thumbTint="@drawable/new_thumb" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llTimer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/llAuto">
+
+            <TextView
+                style="@style/detail_textview_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Timer(in seconds)" />
+
+            <Spinner
+                android:id="@+id/timerSpinner"
+                style="@android:style/Widget.Spinner.DropDown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/llAuto" />
+
+        </LinearLayout>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnShare"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/llAuto"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:includeFontPadding="false"
+            style="@style/button_style_textview"
+            android:background="@color/color_detail_textview_login_signup"
+            android:text="Share"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottom_cl"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_2sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header_cl"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="@dimen/_2sdp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/declared_cl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/heading"
+                style="@style/detail_textview_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingBottom="@dimen/_3sdp"
+                android:text="Last 5 numbers"
+                app:layout_constraintEnd_toEndOf="@+id/bgnum5"
+                app:layout_constraintStart_toStartOf="@+id/bgnum1"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/bgnum1"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:background="@drawable/declared_number"
+                android:visibility="invisible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/heading" />
+
+            <TextView
+                android:id="@+id/num1"
+                style="@style/button_text_style_new"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="--"
+                app:layout_constraintBottom_toBottomOf="@+id/bgnum1"
+                app:layout_constraintEnd_toEndOf="@+id/bgnum1"
+                app:layout_constraintStart_toStartOf="@+id/bgnum1"
+                app:layout_constraintTop_toTopOf="@+id/bgnum1" />
+
+            <View
+                android:id="@+id/bgnum2"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginStart="@dimen/_7sdp"
+                android:background="@drawable/declared_number"
+                android:visibility="invisible"
+                app:layout_constraintStart_toEndOf="@+id/bgnum1"
+                app:layout_constraintTop_toTopOf="@+id/bgnum1" />
+
+            <TextView
+                android:id="@+id/num2"
+                style="@style/button_text_style_new"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="--"
+                app:layout_constraintBottom_toBottomOf="@+id/bgnum2"
+                app:layout_constraintEnd_toEndOf="@+id/bgnum2"
+                app:layout_constraintStart_toStartOf="@+id/bgnum2"
+                app:layout_constraintTop_toTopOf="@+id/bgnum2" />
+
+            <View
+                android:id="@+id/bgnum3"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginStart="@dimen/_7sdp"
+                android:background="@drawable/declared_number"
+                android:visibility="invisible"
+                app:layout_constraintStart_toEndOf="@+id/bgnum2"
+                app:layout_constraintTop_toTopOf="@+id/bgnum2" />
+
+            <TextView
+                android:id="@+id/num3"
+                style="@style/button_text_style_new"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="--"
+                app:layout_constraintBottom_toBottomOf="@+id/bgnum3"
+                app:layout_constraintEnd_toEndOf="@+id/bgnum3"
+                app:layout_constraintStart_toStartOf="@+id/bgnum3"
+                app:layout_constraintTop_toTopOf="@+id/bgnum3" />
+
+            <View
+                android:id="@+id/bgnum4"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginStart="@dimen/_7sdp"
+                android:background="@drawable/declared_number"
+                android:visibility="invisible"
+                app:layout_constraintStart_toEndOf="@+id/bgnum3"
+                app:layout_constraintTop_toTopOf="@+id/bgnum3" />
+
+            <TextView
+                android:id="@+id/num4"
+                style="@style/button_text_style_new"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="--"
+                app:layout_constraintBottom_toBottomOf="@+id/bgnum4"
+                app:layout_constraintEnd_toEndOf="@+id/bgnum4"
+                app:layout_constraintStart_toStartOf="@+id/bgnum4"
+                app:layout_constraintTop_toTopOf="@+id/bgnum4" />
+
+            <View
+                android:id="@+id/bgnum5"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginStart="@dimen/_7sdp"
+                android:background="@drawable/declared_number"
+                android:visibility="invisible"
+                app:layout_constraintStart_toEndOf="@+id/bgnum4"
+                app:layout_constraintTop_toTopOf="@+id/bgnum4" />
+
+            <TextView
+                android:id="@+id/num5"
+                style="@style/button_text_style_new"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="--"
+                app:layout_constraintBottom_toBottomOf="@+id/bgnum5"
+                app:layout_constraintEnd_toEndOf="@+id/bgnum5"
+                app:layout_constraintStart_toStartOf="@+id/bgnum5"
+                app:layout_constraintTop_toTopOf="@+id/bgnum5" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/remain_heading"
+            style="@style/detail_textview_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:gravity="center"
+            android:text="Declared"
+            app:layout_constraintEnd_toEndOf="@+id/totalDeclaredNumbers"
+            app:layout_constraintStart_toStartOf="@+id/totalDeclaredNumbers"
+            app:layout_constraintTop_toBottomOf="@+id/declared_cl" />
+
+        <TextView
+            android:id="@+id/totalDeclaredNumbers"
+            style="@style/button_text_style_new"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:text="00/90"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/remain_heading" />
+
+        <TextView
+            style="@style/detail_textview_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date &amp; Time"
+            app:layout_constraintStart_toStartOf="@+id/txtClock"
+            app:layout_constraintEnd_toEndOf="@+id/txtClock"
+            app:layout_constraintTop_toTopOf="@+id/remain_heading" />
+
+        <TextClock
+            android:id="@+id/txtClock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/button_text_style_new"
+            android:textSize="@dimen/_16ssp"
+            android:format24Hour="dd-MM-yyyy, HH:mm:ss"
+            android:format12Hour="dd-MM-yyyy, HH:mm:ss"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:fontFamily="@font/fontsfree_net_point_soft_black"
+            app:layout_constraintStart_toEndOf="@+id/totalDeclaredNumbers"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/totalDeclaredNumbers"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clSmall"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/totalDeclaredNumbers">
+
+            <View
+                android:id="@+id/bgCurrentDeclaredNumber"
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_80sdp"
+                android:background="@drawable/current_number"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/currentDeclaredNumber"
+                style="@style/button_text_style_new"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:text="--"
+                android:textSize="@dimen/_50ssp"
+                android:textStyle="normal"
+                app:layout_constraintBottom_toBottomOf="@+id/bgCurrentDeclaredNumber"
+                app:layout_constraintEnd_toEndOf="@+id/bgCurrentDeclaredNumber"
+                app:layout_constraintStart_toStartOf="@+id/bgCurrentDeclaredNumber"
+                app:layout_constraintTop_toTopOf="@+id/bgCurrentDeclaredNumber" />
+
+            <TextView
+                android:id="@+id/txtClick"
+                style="@style/detail_textview_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Touch to pick next coin!"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="@+id/currentDeclaredNumber"
+                app:layout_constraintStart_toStartOf="@+id/currentDeclaredNumber"
+                app:layout_constraintTop_toBottomOf="@+id/bgCurrentDeclaredNumber" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/boardRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                tools:itemCount="9"
+                tools:listitem="@layout/grid_single"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtClick" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clBig"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/totalDeclaredNumbers">
+
+            <View
+                android:id="@+id/bgCurrentDeclaredNumberBig"
+                android:layout_width="@dimen/_150sdp"
+                android:layout_height="@dimen/_150sdp"
+                android:background="@drawable/current_number"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/currentDeclaredNumberBig"
+                style="@style/button_text_style_new"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:text="--"
+                android:textSize="@dimen/_100ssp"
+                android:textStyle="normal"
+                app:layout_constraintBottom_toBottomOf="@+id/bgCurrentDeclaredNumberBig"
+                app:layout_constraintEnd_toEndOf="@+id/bgCurrentDeclaredNumberBig"
+                app:layout_constraintStart_toStartOf="@+id/bgCurrentDeclaredNumberBig"
+                app:layout_constraintTop_toTopOf="@+id/bgCurrentDeclaredNumberBig" />
+
+            <TextView
+                android:id="@+id/txtClickBig"
+                style="@style/detail_textview_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Touch to pick next coin!"
+                android:textSize="@dimen/_15ssp"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="@+id/currentDeclaredNumberBig"
+                app:layout_constraintStart_toStartOf="@+id/currentDeclaredNumberBig"
+                app:layout_constraintTop_toBottomOf="@+id/bgCurrentDeclaredNumberBig" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

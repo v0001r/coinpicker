@@ -1,0 +1,3 @@
+password :  tcp1234
+key store password tcp1234
+alias : release

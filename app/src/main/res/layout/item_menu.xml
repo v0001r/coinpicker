@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:id="@+id/layMainItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:layout_marginBottom="@dimen/_3sdp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imgMenu"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="@dimen/_29sdp"
+            android:layout_height="@dimen/_29sdp"
+            android:src="@drawable/ic_mycontest_active"
+            android:contentDescription="@null" />
+
+        <TextView
+            android:id="@+id/txtMenuName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:textStyle="bold"
+            android:text="@string/menu_resume_game"
+            android:includeFontPadding="false"
+            android:fontFamily="@font/fontsfree_net_point_soft_black"
+            android:textSize="@dimen/_11ssp"
+            android:textColor="@color/colorPrimary"/>
+
+    </LinearLayout>
+</layout>

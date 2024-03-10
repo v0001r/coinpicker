@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.devanshi.tambola.coinpicker.fragments.ui.home.HomeFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:id="@+id/startGame"
+        android:text="START GAME"
+        style="@style/currency_digit_textview_style"
+        android:background="@drawable/btn_background"
+        android:gravity="center"
+        android:textSize="@dimen/_18ssp"
+        android:layout_margin="@dimen/_10sdp"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:id="@+id/resumeGame"
+            android:text="RESUME GAME"
+            style="@style/currency_digit_textview_style"
+            android:background="@drawable/btn_background"
+            android:gravity="center"
+            android:textSize="@dimen/_18ssp"
+            android:layout_margin="@dimen/_10sdp"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

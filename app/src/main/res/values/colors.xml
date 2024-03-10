@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#ffff4444</color>
+    <color name="navigation_background_color">#3ECADE</color>
+    <color name="color_game_recycle_heading_text">#FFD401</color>
+    <color name="color_game_recycle_detail_text">#23B7D6</color>
+    <color name="color_game_recycle_detail_ticket_price_text">#757575</color>
+    <color name="color_transparent">#00000000</color>
+    <color name="color_detail_textview_login_signup">#5200aa</color>
+    <color name="color_greyout_textview">#B39697</color>
+    <color name="holo_green_light">#ff99cc00</color>
+    <color name="holo_red_light">#ffff4444</color>
+    <color name="golden">#FFC529</color>
+    <color name="pink">#E91E63</color>
+</resources>

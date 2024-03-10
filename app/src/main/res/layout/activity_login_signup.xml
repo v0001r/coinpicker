@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.devanshi.tambola.coinpicker.activity.LoginSignupActivity">
+
+        <ImageView
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@null"
+            android:scaleType="fitXY"
+            android:src="@drawable/splash" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/rootView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="@dimen/_234sdp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_login_signup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_45sdp"
+                        android:background="@drawable/login_signup_background"
+                        app:layout_constraintEnd_toEndOf="@+id/imgSignup"
+                        app:layout_constraintStart_toStartOf="@+id/imgLogin"
+                        app:layout_constraintTop_toTopOf="@+id/imgLogin" />
+
+                    <View
+                        android:id="@+id/imgLoginBg"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:background="@drawable/yellow_left"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="@+id/imgLogin"
+                        app:layout_constraintEnd_toEndOf="@+id/imgLogin"
+                        app:layout_constraintStart_toStartOf="@+id/imgLogin"
+                        app:layout_constraintTop_toTopOf="@+id/imgLogin" />
+
+
+                    <Button
+                        android:id="@+id/imgLogin"
+                        style="@style/currency_digit_textview_style"
+                        android:layout_width="@dimen/_117sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:background="@android:color/transparent"
+                        android:text="@string/login"
+                        app:layout_constraintEnd_toStartOf="@+id/imgSignup"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <View
+                        android:id="@+id/imgSignupBg"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:background="@drawable/yellow_right"
+                        app:layout_constraintBottom_toBottomOf="@+id/imgSignup"
+                        app:layout_constraintEnd_toEndOf="@+id/imgSignup"
+                        app:layout_constraintStart_toStartOf="@+id/imgSignup"
+                        app:layout_constraintTop_toTopOf="@+id/imgSignup" />
+
+                    <Button
+                        android:id="@+id/imgSignup"
+                        style="@style/currency_digit_textview_style"
+                        android:layout_width="@dimen/_117sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:background="@color/color_transparent"
+                        android:text="@string/sign_up"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/imgLogin"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        style="@style/detail_textview_style"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:gravity="center"
+                        android:text="@string/existing_user"
+                        app:layout_constraintEnd_toEndOf="@+id/imgLogin"
+                        app:layout_constraintStart_toStartOf="@+id/imgLogin"
+                        app:layout_constraintTop_toBottomOf="@+id/imgLogin" />
+
+                    <TextView
+                        style="@style/detail_textview_style"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:gravity="center"
+                        android:text="@string/new_user"
+                        app:layout_constraintEnd_toEndOf="@+id/imgSignup"
+                        app:layout_constraintStart_toStartOf="@+id/imgSignup"
+                        app:layout_constraintTop_toBottomOf="@+id/imgSignup" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    app:layout_constraintTop_toBottomOf="@+id/cl_login_signup">
+
+                    <EditText
+                        android:id="@+id/edt_login_username"
+                        style="@style/detail_edittext_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:autofillHints=""
+                        android:backgroundTint="@color/color_detail_textview_login_signup"
+                        android:gravity="center"
+                        android:hint="@string/username"
+                        android:imeOptions="actionNext"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:inputType="text" />
+
+                    <EditText
+                        android:id="@+id/edt_login_password"
+                        style="@style/detail_edittext_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:autofillHints=""
+                        android:backgroundTint="@color/color_detail_textview_login_signup"
+                        android:gravity="center"
+                        android:hint="@string/password"
+                        android:inputType="textPassword"
+                        app:layout_constraintTop_toBottomOf="@+id/edt_login_username" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/chkbox_cl"
+                        android:visibility="gone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/edt_login_password">
+
+                        <CheckBox
+                            android:id="@+id/chkbox_remember_me"
+                            style="@style/detail_textview_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_4sdp"
+                            android:buttonTint="@color/color_detail_textview_login_signup"
+                            app:layout_constraintEnd_toStartOf="@+id/chkboxText"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <EditText
+                            android:id="@+id/chkboxText"
+                            style="@style/detail_edittext_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/color_detail_textview_login_signup"
+                            android:clickable="false"
+                            android:contextClickable="false"
+                            android:focusable="false"
+                            android:gravity="center"
+                            android:hint="@null"
+                            android:importantForAutofill="no"
+                            android:inputType="none"
+                            android:labelFor="@+id/chkbox_remember_me"
+                            android:text="@string/remember_me"
+                            app:layout_constraintBottom_toBottomOf="@+id/chkbox_remember_me"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/chkbox_remember_me"
+                            app:layout_constraintTop_toTopOf="@+id/chkbox_remember_me" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <TextView
+                        android:id="@+id/txt_forgot_password"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:fontFamily="@font/fontsfree_net_point_soft_black"
+                        android:text="@string/forgot_password"
+                        android:textColor="@color/color_detail_textview_login_signup"
+                        android:textSize="@dimen/_13ssp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/chkbox_cl" />
+
+                    <Button
+                        android:id="@+id/btn_login"
+                        style="@style/currency_digit_textview_style"
+                        android:layout_width="@dimen/_171sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:background="@drawable/btn_background"
+                        android:gravity="center"
+                        android:text="@string/str_login"
+                        android:textAllCaps="false"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_forgot_password" />
+
+                    <Button
+                        android:id="@+id/btn_guest_login"
+                        style="@style/currency_digit_textview_style"
+                        android:layout_width="@dimen/_171sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@drawable/btn_background"
+                        android:gravity="center"
+                        android:text="@string/str_guest_login"
+                        android:textAllCaps="false"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/btn_login" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_signup"
+                    android:layout_width="match_parent"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    app:layout_constraintTop_toBottomOf="@+id/cl_login_signup">
+
+                    <EditText
+                        android:id="@+id/edt_fname"
+                        style="@style/detail_edittext_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:autofillHints=""
+                        android:backgroundTint="@color/color_detail_textview_login_signup"
+                        android:gravity="center"
+                        android:hint="@string/firstname"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <EditText
+                        android:id="@+id/edt_lname"
+                        style="@style/detail_edittext_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:autofillHints=""
+                        android:backgroundTint="@color/color_detail_textview_login_signup"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:gravity="center"
+                        android:hint="@string/lastname"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        app:layout_constraintTop_toBottomOf="@+id/edt_fname" />
+
+                    <EditText
+                        android:id="@+id/edt_email"
+                        style="@style/detail_edittext_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:autofillHints=""
+                        android:backgroundTint="@color/color_detail_textview_login_signup"
+                        android:gravity="center"
+                        android:hint="@string/str_email"
+                        android:imeOptions="actionNext"
+                        android:inputType="textEmailAddress"
+                        app:layout_constraintTop_toBottomOf="@+id/edt_lname" />
+
+                    <EditText
+                        android:id="@+id/edt_registration_password"
+                        style="@style/detail_edittext_style"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:autofillHints=""
+                        android:backgroundTint="@color/color_detail_textview_login_signup"
+                        android:gravity="center"
+                        android:hint="@string/password"
+                        android:imeOptions="actionNext"
+                        android:inputType="textPassword"
+                        app:layout_constraintTop_toBottomOf="@+id/edt_email" />
+
+                    <EditText
+                        android:id="@+id/edt_registration_cpassword"
+                        style="@style/detail_edittext_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:autofillHints=""
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:backgroundTint="@color/color_detail_textview_login_signup"
+                        android:gravity="center"
+                        android:hint="@string/confirmpassword"
+                        android:imeOptions="actionDone"
+                        android:inputType="textPassword"
+                        app:layout_constraintTop_toBottomOf="@+id/edt_registration_password" />
+                    <Button
+                        android:id="@+id/btn_request_otp"
+                        style="@style/currency_digit_textview_style"
+                        android:layout_width="@dimen/_171sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:background="@drawable/btn_background"
+                        android:gravity="center"
+                        android:text="@string/str_signup"
+                        android:textAllCaps="false"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/edt_registration_cpassword" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

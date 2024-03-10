@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "com.devanshi.tambola.coinpicker",
+  "variantName": "release",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "properties": [],
+      "versionCode": 5,
+      "versionName": "5.0",
+      "enabled": true,
+      "outputFile": "Tambola_coinpicker_version_code_5_name_5.0-release.apk"
+    }
+  ]
+}
